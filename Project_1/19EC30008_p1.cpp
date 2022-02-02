@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <map>
 #include <cmath>
@@ -7,12 +8,13 @@ using namespace std;
 //loads training or test data into vectors
 void load_data(vector<vector<int>> &x,vector<int> &y, bool isTraining)
 {
+	fstream data_file;
 	if(isTraining)
-		freopen("project1.data","r",stdin);
+		data_file.open("project1.data",ios::in);
 	else
-		freopen("project1_test.data","r",stdin);
+		data_file.open("project1_test.data",ios::in);
 	string line;
-	while(getline(cin,line))
+	while(getline(data_file,line))
 	{
 		line+=",";
 		int cnt=0;
@@ -108,7 +110,7 @@ void build_model(vector<vector<int>> &adj,vector<vector<int>> &x,vector<int> &y,
 
 	nodeID++;
 	int myID=nodeID;
-	adj.push_back(vector<int>(6,-1));
+	adj.push_back(vector<int>(7,-1));
 
 	if(parent!=-1){
 		int parentBranch=values[nodeAttribute[parent]];
@@ -144,6 +146,8 @@ void build_model(vector<vector<int>> &adj,vector<vector<int>> &x,vector<int> &y,
 			}
 		}
 		newEntropy/=(double)S.size();
+		if(parent==-1)
+		cerr<<newEntropy<<"\n";
 		if(initialEntropy-newEntropy>maxInfoGain)
 		{
 			bestAttribute=i;
@@ -164,7 +168,7 @@ void build_model(vector<vector<int>> &adj,vector<vector<int>> &x,vector<int> &y,
 void display_tree(vector<vector<int>>& adj,vector<int> &nodeAttribute,int depth,int node,vector<string> &attrNames,vector<string> &attrValues,vector<string> &outputClass)
 {
 	bool isLeaf=1;
-	for(int i=0;i<6;i++)
+	for(int i=0;i<7;i++)
 	{
 		if(adj[node][i]!=-1)
 		{
@@ -181,6 +185,14 @@ void display_tree(vector<vector<int>>& adj,vector<int> &nodeAttribute,int depth,
 				cout<<" ";
 		cout<<outputClass[nodeAttribute[node]-10]<<"\n";
 	}
+}
+
+int predict(vector<vector<int>> &adj,vector<int> &x,vector<int> &nodeAttribute,int node)
+{
+	cerr<<nodeAttribute[node]<<"\n";
+	if(nodeAttribute[node]>=10)
+		return nodeAttribute[node]-10;
+	return predict(adj,x,nodeAttribute,adj[node][x[nodeAttribute[node]]]);
 }
 
 int main()
@@ -200,4 +212,19 @@ int main()
 	vector<string> outputClass({"unacc","acc","good","vgood"});
 	display_tree(adj,nodeAttribute,0,0,attrNames,attrValues,outputClass);
 
+	vector<vector<int>> x_test(6); 
+	load_data(x_test,y_train,false);
+
+	freopen("prediction.out","w",stdout);
+	vector<int> y_test;
+	for(int i=0;i<x_test[0].size();i++)
+	{
+		vector<int> currentTest;
+		for(int j=0;j<6;j++)
+			currentTest.push_back(x_test[j][i]);
+		y_test[i]=predict(adj,currentTest,nodeAttribute,0);
+	}
+
+	for(auto &it:y_test)
+		cout<<outputClass[it]<<"\n";
 }
