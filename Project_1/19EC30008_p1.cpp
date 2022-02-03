@@ -146,8 +146,7 @@ void build_model(vector<vector<int>> &adj,vector<vector<int>> &x,vector<int> &y,
 			}
 		}
 		newEntropy/=(double)S.size();
-		if(parent==-1)
-		cerr<<newEntropy<<"\n";
+
 		if(initialEntropy-newEntropy>maxInfoGain)
 		{
 			bestAttribute=i;
@@ -165,7 +164,7 @@ void build_model(vector<vector<int>> &adj,vector<vector<int>> &x,vector<int> &y,
 	}
 }
 
-void display_tree(vector<vector<int>>& adj,vector<int> &nodeAttribute,int depth,int node,vector<string> &attrNames,vector<string> &attrValues,vector<string> &outputClass)
+void display_tree(vector<vector<int>>& adj,vector<int> &nodeAttribute,int depth,int node,vector<string> &attrNames,vector<string> &attrValues,vector<string> &outputClass,fstream &dec_tree)
 {
 	bool isLeaf=1;
 	for(int i=0;i<7;i++)
@@ -173,23 +172,28 @@ void display_tree(vector<vector<int>>& adj,vector<int> &nodeAttribute,int depth,
 		if(adj[node][i]!=-1)
 		{
 			isLeaf=0;
-			for(int cnt=0;cnt<depth*4;cnt++)
-				cout<<" ";
-			cout<<attrNames[nodeAttribute[node]]<<" = "<<((nodeAttribute[node]!=2 && nodeAttribute[node]!=3 )? attrValues[i] : to_string(i))<<"\n";
-			display_tree(adj,nodeAttribute,depth+1,adj[node][i],attrNames,attrValues,outputClass);
+			for(int cnt=0;cnt<depth;cnt++)
+			{
+				dec_tree<<"|";
+				dec_tree<<"   ";
+			}
+			dec_tree<<attrNames[nodeAttribute[node]]<<" = "<<((nodeAttribute[node]!=2 && nodeAttribute[node]!=3 )? attrValues[i] : to_string(i))<<"\n";
+			display_tree(adj,nodeAttribute,depth+1,adj[node][i],attrNames,attrValues,outputClass,dec_tree);
 		}
 	}
 	if(isLeaf)
 	{
-		for(int cnt=0;cnt<depth*4;cnt++)
-				cout<<" ";
-		cout<<outputClass[nodeAttribute[node]-10]<<"\n";
+		for(int cnt=0;cnt<depth;cnt++)
+			{
+				dec_tree<<"|";
+				dec_tree<<"   ";
+			}
+		dec_tree<<outputClass[nodeAttribute[node]-10]<<"\n";
 	}
 }
 
 int predict(vector<vector<int>> &adj,vector<int> &x,vector<int> &nodeAttribute,int node)
 {
-	cerr<<nodeAttribute[node]<<"\n";
 	if(nodeAttribute[node]>=10)
 		return nodeAttribute[node]-10;
 	return predict(adj,x,nodeAttribute,adj[node][x[nodeAttribute[node]]]);
@@ -210,21 +214,25 @@ int main()
 	vector<string> attrNames({"price","maint","doors","persons","lug_boot","safety"});
 	vector<string> attrValues({"vhigh","high","med","low","small","big"});
 	vector<string> outputClass({"unacc","acc","good","vgood"});
-	display_tree(adj,nodeAttribute,0,0,attrNames,attrValues,outputClass);
+	fstream dec_tree;
+	dec_tree.open("decision_tree.txt",ios::out);
+	display_tree(adj,nodeAttribute,0,0,attrNames,attrValues,outputClass,dec_tree);
 
-	vector<vector<int>> x_test(6); 
-	load_data(x_test,y_train,false);
+	vector<vector<int>> x_test(6);
+	vector<int> y_test; 
+	load_data(x_test,y_test,false);
 
-	freopen("prediction.out","w",stdout);
-	vector<int> y_test;
+	vector<int> prediction;
 	for(int i=0;i<x_test[0].size();i++)
 	{
 		vector<int> currentTest;
 		for(int j=0;j<6;j++)
 			currentTest.push_back(x_test[j][i]);
-		y_test[i]=predict(adj,currentTest,nodeAttribute,0);
+		prediction.push_back(predict(adj,currentTest,nodeAttribute,0));
 	}
 
-	for(auto &it:y_test)
-		cout<<outputClass[it]<<"\n";
+	fstream output;
+	output.open("prediction.txt",ios::out);
+	for(auto &it:prediction)
+		output<<outputClass[it]<<"\n";
 }
