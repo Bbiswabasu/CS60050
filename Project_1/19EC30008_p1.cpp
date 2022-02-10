@@ -1,3 +1,9 @@
+/*
+Name - Bbiswabasu Roy
+Roll - 19EC30008
+Assignment - 1
+No specific flags required
+*/
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -79,7 +85,7 @@ void build_model(vector<vector<int>> &adj,vector<vector<int>> &x,vector<int> &y,
 {
 	double eps=1e-6;
 
-	double initialEntropy,maxInfoGain=-1;
+	double initialEntropy,maxInfoGain=-1e9;
 	int bestAttribute=-1;
 	vector<int> S;
 	vector<vector<int>> filteredX(6);
@@ -201,15 +207,16 @@ int predict(vector<vector<int>> &adj,vector<int> &x,vector<int> &nodeAttribute,i
 
 int main()
 {
-	vector<vector<int>> x_train(6); //feature vector
-	vector<int> y_train; //output vector
+	vector<vector<int>> x_train(6); //feature vector of training set
+	vector<int> y_train; //output vector of training set
 	load_data(x_train,y_train,true);
 
-	vector<vector<int>> adj;
-	vector<int> values(6,-1);
-	int nodeID=-1;
-	vector<int> nodeAttribute;
+	vector<vector<int>> adj; //stores adjacency list of the decision tree
+	vector<int> values(6,-1); //stores values which are already fixed at current node
+	int nodeID=-1; //assigns unique ID to each node
+	vector<int> nodeAttribute; //stores which attribute to split on at some node
 	build_model(adj,x_train,y_train,values,nodeID,nodeAttribute,-1);
+	cout<<"Decision Tree built and stored in decision_tree.txt\n";
 
 	vector<string> attrNames({"price","maint","doors","persons","lug_boot","safety"});
 	vector<string> attrValues({"vhigh","high","med","low","small","big"});
@@ -218,8 +225,8 @@ int main()
 	dec_tree.open("decision_tree.txt",ios::out);
 	display_tree(adj,nodeAttribute,0,0,attrNames,attrValues,outputClass,dec_tree);
 
-	vector<vector<int>> x_test(6);
-	vector<int> y_test; 
+	vector<vector<int>> x_test(6); //feature vector of test set
+	vector<int> y_test; //actual output vector of test set
 	load_data(x_test,y_test,false);
 
 	vector<int> prediction;
@@ -230,9 +237,17 @@ int main()
 			currentTest.push_back(x_test[j][i]);
 		prediction.push_back(predict(adj,currentTest,nodeAttribute,0));
 	}
+	cout<<"Prediction completed and stored in prediction.txt\nError : ";
+	double error=0;
 
 	fstream output;
 	output.open("prediction.txt",ios::out);
-	for(auto &it:prediction)
-		output<<outputClass[it]<<"\n";
+	for(int i=0;i<prediction.size();i++)
+	{
+		output<<outputClass[prediction[i]]<<"\n";
+		if(prediction[i]!=y_test[i])
+			error++;
+	}
+	error/=(double)y_test.size();
+	cout<<error*100<<"%\n";
 }

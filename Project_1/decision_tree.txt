@@ -33,7 +33,7 @@ safety = high
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   acc
@@ -47,7 +47,7 @@ safety = high
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   good
@@ -64,7 +64,7 @@ safety = high
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   acc
@@ -78,7 +78,7 @@ safety = high
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   good
@@ -92,7 +92,7 @@ safety = high
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   good
@@ -116,7 +116,7 @@ safety = high
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   |   maint = low
 |   |   |   |   doors = 2
@@ -130,7 +130,7 @@ safety = high
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   price = high
 |   |   |   maint = vhigh
@@ -147,7 +147,7 @@ safety = high
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   |   maint = med
 |   |   |   |   doors = 2
@@ -161,7 +161,7 @@ safety = high
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   |   maint = low
 |   |   |   |   doors = 2
@@ -175,7 +175,7 @@ safety = high
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   price = med
 |   |   |   maint = vhigh
@@ -190,7 +190,7 @@ safety = high
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   |   maint = high
 |   |   |   |   doors = 2
@@ -204,7 +204,7 @@ safety = high
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   |   maint = med
 |   |   |   |   lug_boot = med
@@ -214,7 +214,7 @@ safety = high
 |   |   |   |   |   |   vgood
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   doors = 2
@@ -223,7 +223,7 @@ safety = high
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = big
 |   |   |   |   |   vgood
@@ -235,7 +235,7 @@ safety = high
 |   |   |   |   |   |   vgood
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   doors = 2
@@ -244,7 +244,7 @@ safety = high
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = big
 |   |   |   |   |   vgood
@@ -261,7 +261,7 @@ safety = high
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   |   maint = high
 |   |   |   |   lug_boot = med
@@ -271,7 +271,7 @@ safety = high
 |   |   |   |   |   |   vgood
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   doors = 2
@@ -280,7 +280,7 @@ safety = high
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = big
 |   |   |   |   |   vgood
@@ -292,7 +292,7 @@ safety = high
 |   |   |   |   |   |   vgood
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   doors = 2
@@ -301,7 +301,7 @@ safety = high
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = big
 |   |   |   |   |   vgood
@@ -313,7 +313,7 @@ safety = high
 |   |   |   |   |   |   vgood
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   vgood
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   vgood
 |   |   |   |   lug_boot = small
 |   |   |   |   |   doors = 2
@@ -322,7 +322,7 @@ safety = high
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = big
 |   |   |   |   |   vgood
@@ -343,7 +343,7 @@ safety = med
 |   |   |   |   |   |   unacc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -357,7 +357,7 @@ safety = med
 |   |   |   |   |   |   unacc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -378,7 +378,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   maint = low
 |   |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   maint = vhigh
 |   |   |   |   |   |   unacc
 |   |   |   |   |   maint = high
@@ -407,7 +407,7 @@ safety = med
 |   |   |   |   |   |   unacc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -421,7 +421,7 @@ safety = med
 |   |   |   |   |   |   unacc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -437,7 +437,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = small
 |   |   |   |   |   acc
@@ -452,7 +452,7 @@ safety = med
 |   |   |   |   |   |   unacc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -468,7 +468,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = small
 |   |   |   |   |   acc
@@ -482,7 +482,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = small
 |   |   |   |   |   acc
@@ -502,7 +502,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -516,7 +516,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -533,7 +533,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   maint = med
 |   |   |   |   |   doors = 2
@@ -542,7 +542,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   maint = low
 |   |   |   |   |   doors = 2
@@ -551,7 +551,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   lug_boot = small
 |   |   |   |   unacc
@@ -573,7 +573,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -587,7 +587,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -605,7 +605,7 @@ safety = med
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   |   maint = low
 |   |   |   |   lug_boot = med
@@ -615,7 +615,7 @@ safety = med
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = small
 |   |   |   |   |   doors = 2
@@ -624,7 +624,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = big
 |   |   |   |   |   good
@@ -637,7 +637,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = small
 |   |   |   |   |   unacc
@@ -655,7 +655,7 @@ safety = med
 |   |   |   |   |   acc
 |   |   |   |   doors = 4
 |   |   |   |   |   acc
-|   |   |   |   doors = 5
+|   |   |   |   doors = 6
 |   |   |   |   |   acc
 |   |   |   maint = med
 |   |   |   |   lug_boot = med
@@ -665,7 +665,7 @@ safety = med
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = small
 |   |   |   |   |   doors = 2
@@ -674,7 +674,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = big
 |   |   |   |   |   good
@@ -686,7 +686,7 @@ safety = med
 |   |   |   |   |   |   good
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   good
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   good
 |   |   |   |   lug_boot = small
 |   |   |   |   |   doors = 2
@@ -695,7 +695,7 @@ safety = med
 |   |   |   |   |   |   acc
 |   |   |   |   |   doors = 4
 |   |   |   |   |   |   acc
-|   |   |   |   |   doors = 5
+|   |   |   |   |   doors = 6
 |   |   |   |   |   |   acc
 |   |   |   |   lug_boot = big
 |   |   |   |   |   good
