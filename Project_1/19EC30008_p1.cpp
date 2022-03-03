@@ -85,7 +85,7 @@ void build_model(vector<vector<int>> &adj,vector<vector<int>> &x,vector<int> &y,
 {
 	double eps=1e-6;
 
-	double initialEntropy,maxInfoGain=-1e9;
+	double initialEntropy,maxInfoGain=-100;
 	int bestAttribute=-1;
 	vector<int> S;
 	vector<vector<int>> filteredX(6);
